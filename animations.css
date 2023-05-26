@@ -1,5 +1,5 @@
 /* GLOW */
-@keyframes a {
+/* @keyframes a {
     0% {
         background-color: black;
         color: white;
@@ -19,8 +19,8 @@
 }
 
 .a {
-    animation: 2s ease-in 0s 1 a;
-}
+    animation: 1s ease-in 0s 1 a;
+} */
 
 /*DROP INS*/
 
@@ -54,65 +54,164 @@
     30% {transform: translateY(10%);}
     35% {transform: translateY(0);}
 }
+@keyframes a-6 {
+    0% {transform: translateY(-1000%);}
+    12.5% {transform: translateY(-1000%);}
+    32.5% {transform: translateY(10%);}
+    37.5% {transform: translateY(0);}
+}
+@keyframes a-7 {
+    0% {transform: translateY(-1000%);}
+    15% {transform: translateY(-1000%);}
+    35% {transform: translateY(10%);}
+    40% {transform: translateY(0);}
+}
+@keyframes a-8 {
+    0% {transform: translateY(-1000%);}
+    17.5% {transform: translateY(-1000%);}
+    37.5% {transform: translateY(10%);}
+    42.5% {transform: translateY(0);}
+}
+@keyframes a-9 {
+    0% {transform: translateY(-1000%);}
+    20% {transform: translateY(-1000%);}
+    40% {transform: translateY(10%);}
+    45% {transform: translateY(0);}
+}
+@keyframes a-10 {
+    0% {transform: translateY(-1000%);}
+    22.5% {transform: translateY(-1000%);}
+    42.5% {transform: translateY(10%);}
+    47.5% {transform: translateY(0);}
+}
+@keyframes a-11 {
+    0% {transform: translateY(-1000%);}
+    25% {transform: translateY(-1000%);}
+    45% {transform: translateY(10%);}
+    50% {transform: translateY(0);}
+}
+@keyframes a-12 {
+    0% {transform: translateY(-1000%);}
+    27.5% {transform: translateY(-1000%);}
+    47.5% {transform: translateY(10%);}
+    52.5% {transform: translateY(0);}
+}
+@keyframes a-13 {
+    0% {transform: translateY(-1000%);}
+    30% {transform: translateY(-1000%);}
+    50% {transform: translateY(10%);}
+    55% {transform: translateY(0);}
+}
+@keyframes a-14 {
+    0% {transform: translateY(-1000%);}
+    32.5% {transform: translateY(-1000%);}
+    52.5% {transform: translateY(10%);}
+    57.5% {transform: translateY(0);}
+}
+@keyframes a-15 {
+    0% {transform: translateY(-1000%);}
+    35% {transform: translateY(-1000%);}
+    55% {transform: translateY(10%);}
+    60% {transform: translateY(0);}
+}
+@keyframes a-16 {
+    0% {transform: translateY(-1000%);}
+    37.5% {transform: translateY(-1000%);}
+    57.5% {transform: translateY(10%);}
+    62.5% {transform: translateY(0);}
+}
+@keyframes a-17 {
+    0% {transform: translateY(-1000%);}
+    40% {transform: translateY(-1000%);}
+    60% {transform: translateY(10%);}
+    65% {transform: translateY(0);}
+}
+@keyframes a-18 {
+    0% {transform: translateY(-1000%);}
+    42.5% {transform: translateY(-1000%);}
+    62.5% {transform: translateY(10%);}
+    67.5% {transform: translateY(0);}
+}
+@keyframes a-19 {
+    0% {transform: translateY(-1000%);}
+    45% {transform: translateY(-1000%);}
+    65% {transform: translateY(10%);}
+    70% {transform: translateY(0);}
+}
+@keyframes a-20 {
+    0% {transform: translateY(-1000%);}
+    47.5% {transform: translateY(-1000%);}
+    67.5% {transform: translateY(10%);}
+    72.5% {transform: translateY(0);}
+}
+@keyframes a-s {
+    0% {transform: translateY(-1000%);}
+    50% {transform: translateY(-1000%);}
+    70% {transform: translateY(10%);}
+    75% {transform: translateY(0);}
+}
 
 
 .a-1 {
-    animation: 4s ease-out 0s 1 a-1;
+    animation: 1s ease-out 0s 1 a-1;
 }
 .a-2 {
-    animation: 4s ease-out 0s 1 a-2;
+    animation: 1s ease-out 0s 1 a-2;
 }
 .a-3 {
-    animation: 4s ease-out 0s 1 a-3;
+    animation: 1s ease-out 0s 1 a-3;
 }
 .a-4 {
-    animation: 4s ease-out 0s 1 a-4;
+    animation: 1s ease-out 0s 1 a-4;
 }
 .a-5 {
-    animation: 4s ease-out 0s 1 a-5;
+    animation: 1s ease-out 0s 1 a-5;
 }
 .a-6 {
-    animation: 4s ease-out 0s 1 a-6;
+    animation: 1s ease-out 0s 1 a-6;
 }
 .a-7 {
-    animation: 4s ease-out 0s 1 a-7;
+    animation: 1s ease-out 0s 1 a-7;
 }
 .a-8 {
-    animation: 4s ease-out 0s 1 a-8;
+    animation: 1s ease-out 0s 1 a-8;
 }
 .a-9 {
-    animation: 4s ease-out 0s 1 a-9;
+    animation: 1s ease-out 0s 1 a-9;
 }
 .a-10 {
-    animation: 4s ease-out 0s 1 a-10;
+    animation: 1s ease-out 0s 1 a-10;
 }
 .a-11 {
-    animation: 4s ease-out 0s 1 a-11;
+    animation: 1s ease-out 0s 1 a-11;
 }
 .a-12 {
-    animation: 4s ease-out 0s 1 a-12;
+    animation: 1s ease-out 0s 1 a-12;
 }
 .a-13 {
-    animation: 4s ease-out 0s 1 a-13;
+    animation: 1s ease-out 0s 1 a-13;
 }
 .a-14 {
-    animation: 4s ease-out 0s 1 a-14;
+    animation: 1s ease-out 0s 1 a-14;
 }
 .a-15 {
-    animation: 4s ease-out 0s 1 a-15;
+    animation: 1s ease-out 0s 1 a-15;
 }
 .a-16 {
-    animation: 4s ease-out 0s 1 a-16;
+    animation: 1s ease-out 0s 1 a-16;
 }
 .a-17 {
-    animation: 4s ease-out 0s 1 a-17;
+    animation: 1s ease-out 0s 1 a-17;
 }
 .a-18 {
-    animation: 4s ease-out 0s 1 a-18;
+    animation: 1s ease-out 0s 1 a-18;
 }
 .a-19 {
-    animation: 4s ease-out 0s 1 a-19;
+    animation: 1s ease-out 0s 1 a-19;
 }
 .a-20 {
-    animation: 4s ease-out 0s 1 a-20;
+    animation: 1s ease-out 0s 1 a-20;
+}
+.a-s {
+    animation: 1s ease-out 0s 1 a-s;
 }
