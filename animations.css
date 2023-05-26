@@ -1,0 +1,118 @@
+/* GLOW */
+@keyframes a {
+    0% {
+        background-color: black;
+        color: white;
+    }
+    80% {
+        background-color: black;
+        color: white;
+    }
+    90% {
+        background-color: rgb(124,254,228);
+        color: black;
+    }
+    100% {
+        background-color: black;
+        color: white;
+    }
+}
+
+.a {
+    animation: 2s ease-in 0s 1 a;
+}
+
+/*DROP INS*/
+
+@keyframes a-1 {
+    0% {transform: translateY(-1000%);}
+    0% {transform: translateY(-1000%);}
+    20% {transform: translateY(10%);}
+    25% {transform: translateY(0);}
+}
+@keyframes a-2 {
+    0% {transform: translateY(-1000%);}
+    2.5% {transform: translateY(-1000%);}
+    22.5% {transform: translateY(10%);}
+    27.5% {transform: translateY(0);}
+}
+@keyframes a-3 {
+    0% {transform: translateY(-1000%);}
+    5% {transform: translateY(-1000%);}
+    25% {transform: translateY(10%);}
+    30% {transform: translateY(0);}
+}
+@keyframes a-4 {
+    0% {transform: translateY(-1000%);}
+    7.5% {transform: translateY(-1000%);}
+    27.5% {transform: translateY(10%);}
+    32.5% {transform: translateY(0);}
+}
+@keyframes a-5 {
+    0% {transform: translateY(-1000%);}
+    10% {transform: translateY(-1000%);}
+    30% {transform: translateY(10%);}
+    35% {transform: translateY(0);}
+}
+
+
+.a-1 {
+    animation: 4s ease-out 0s 1 a-1;
+}
+.a-2 {
+    animation: 4s ease-out 0s 1 a-2;
+}
+.a-3 {
+    animation: 4s ease-out 0s 1 a-3;
+}
+.a-4 {
+    animation: 4s ease-out 0s 1 a-4;
+}
+.a-5 {
+    animation: 4s ease-out 0s 1 a-5;
+}
+.a-6 {
+    animation: 4s ease-out 0s 1 a-6;
+}
+.a-7 {
+    animation: 4s ease-out 0s 1 a-7;
+}
+.a-8 {
+    animation: 4s ease-out 0s 1 a-8;
+}
+.a-9 {
+    animation: 4s ease-out 0s 1 a-9;
+}
+.a-10 {
+    animation: 4s ease-out 0s 1 a-10;
+}
+.a-11 {
+    animation: 4s ease-out 0s 1 a-11;
+}
+.a-12 {
+    animation: 4s ease-out 0s 1 a-12;
+}
+.a-13 {
+    animation: 4s ease-out 0s 1 a-13;
+}
+.a-14 {
+    animation: 4s ease-out 0s 1 a-14;
+}
+.a-15 {
+    animation: 4s ease-out 0s 1 a-15;
+}
+.a-16 {
+    animation: 4s ease-out 0s 1 a-16;
+}
+.a-17 {
+    animation: 4s ease-out 0s 1 a-17;
+}
+.a-18 {
+    animation: 4s ease-out 0s 1 a-18;
+}
+.a-19 {
+    animation: 4s ease-out 0s 1 a-19;
+}
+.a-20 {
+    animation: 4s ease-out 0s 1 a-20;
+}
