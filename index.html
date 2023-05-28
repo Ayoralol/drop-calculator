@@ -16,29 +16,33 @@
 <body>
     <div class="calc-container">
         <div class="calc-screen">
-            <p class="calc-screen-input a-s">0</p>
+            <div data-previous-operand class="calc-screen-previous a-h"></div>
+            <div data-current-operand class="calc-screen-current a-s"></div>
         </div>
-        <div class="calc-input">
-                <button class="calc-btn a-17">&#40</button>
-                <button class="calc-btn a-18">&#41</button>
-                <button class="calc-btn a-19">&#37</button>
-                <button class="calc-btn a-20">C</button>
-                <button class="calc-btn a-13">7</button>
-                <button class="calc-btn a-14">8</button>
-                <button class="calc-btn a-15">9</button>
-                <button class="calc-btn a-16">&#47</button>
-                <button class="calc-btn a-9">4</button>
-                <button class="calc-btn a-10">5</button>
-                <button class="calc-btn a-11">6</button>
-                <button class="calc-btn a-12">&#42</button>
-                <button class="calc-btn a-5">1</button>
-                <button class="calc-btn a-6">2</button>
-                <button class="calc-btn a-7">3</button>
-                <button class="calc-btn a-8">&#45</button>
-                <button class="calc-btn a-1">0</button>
-                <button class="calc-btn a-2">&#46</button>
-                <button class="calc-btn a-3">&#61</button>
-                <button class="calc-btn a-4">&#43</button>
+        <div class="calc-input-container">
+            <button data-all-clear class="calc-btn all-clear">AC</button>
+            <div class="calc-input">
+                <button data-operation class="calc-btn a-17">&#40</button>
+                <button data-operation class="calc-btn a-18">&#41</button>
+                <button data-operation class="calc-btn a-19">&#37</button>
+                <button data-delete class="calc-btn a-20">C</button>
+                <button data-number class="calc-btn a-13">7</button>
+                <button data-number class="calc-btn a-14">8</button>
+                <button data-number class="calc-btn a-15">9</button>
+                <button data-operation class="calc-btn a-16">&#47</button>
+                <button data-number class="calc-btn a-9">4</button>
+                <button data-number class="calc-btn a-10">5</button>
+                <button data-number class="calc-btn a-11">6</button>
+                <button data-operation class="calc-btn a-12">&#42</button>
+                <button data-number class="calc-btn a-5">1</button>
+                <button data-number class="calc-btn a-6">2</button>
+                <button data-number class="calc-btn a-7">3</button>
+                <button data-operation class="calc-btn a-8">&#45</button>
+                <button data-number class="calc-btn a-1">0</button>
+                <button data-number class="calc-btn a-2">&#46</button>
+                <button data-equals class="calc-btn a-3">&#61</button>
+                <button data-operation class="calc-btn a-4">&#43</button>
+            </div>
         </div>
     </div>
     <script src="/index.js"></script>

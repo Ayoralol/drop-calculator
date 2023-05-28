@@ -126,6 +126,11 @@
     70% {transform: translateY(10%);}
     75% {transform: translateY(0);}
 }
+@keyframes a-h {
+    0% {color: black;}
+    80% {color: black;}
+    100% {color: white;}
+}
 
 
 .a-1 {
@@ -191,18 +196,6 @@
 .a-s {
     animation: 1s ease-out 0s 1 a-s;
 }
-
-/* CLICK ANIMATION */
-
-@keyframes click {
-    0% {
-        background-color: rgb(124,254,228)
-    }
-    10% {
-        background-color: rgb(0,0,0)
-    }
-    20% {
-        background-image: radial-gradient();
-    }
+.a-h {
+    animation: 1s ease-out 0s 1 a-h;
 }
-
