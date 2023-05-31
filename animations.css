@@ -131,8 +131,15 @@
     80% {color: black;}
     100% {color: white;}
 }
+@keyframes mouseStart {
+    0% {pointer-events: none;}
+    60% {pointer-events: none;}
+    65% {pointer-events: all;}
+}
 
-
+* {
+    animation: 1s none 0s 1 mouseStart;
+}
 .a-1 {
     animation: 1s ease-out 0s 1 a-1;
 }

@@ -20,12 +20,10 @@
             <div data-current-operand class="calc-screen-current a-s"></div>
         </div>
         <div class="calc-input-container">
-            <button data-all-clear class="calc-btn all-clear">AC</button>
             <div class="calc-input">
-                <button data-operation class="calc-btn a-17">&#40</button>
-                <button data-operation class="calc-btn a-18">&#41</button>
-                <button data-operation class="calc-btn a-19">&#37</button>
-                <button data-delete class="calc-btn a-20">C</button>
+                <button data-number class="calc-btn a-17">&#37</button>
+                <button data-delete class="calc-btn a-18">C</button>
+                <button data-all-clear class="calc-btn a-19 double">AC</button>
                 <button data-number class="calc-btn a-13">7</button>
                 <button data-number class="calc-btn a-14">8</button>
                 <button data-number class="calc-btn a-15">9</button>
@@ -45,6 +43,15 @@
             </div>
         </div>
     </div>
-    <script src="/index.js"></script>
+    <div class="function-buttons-wrap">
+        <div class="function-buttons">
+            <button class="hide-numbers bot-btn">Hide</button>
+        </div>
+        <div class="function-buttons">
+            <button class="dark-mode-button bot-btn">Dark Mode</button>
+            <button class="light-mode-button bot-btn">Light Mode</button>
+        </div>
+    </div>
+    <script src="/compute.js"></script>
 </body>
 </html>
