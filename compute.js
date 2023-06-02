@@ -11,21 +11,36 @@ const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
+const previousOperandTextElementTwo = document.querySelector('[data-previous-operand-2]');
+const previousOperandTextElementThree = document.querySelector('[data-previous-operand-3]');
+const previousOperandTextElementFour = document.querySelector('[data-previous-operand-4]');
 
 var i, j, k, l;
 
 /* COMPUTE */
 
 class Calculator {
-    constructor(previousOperandTextElement, currentOperandTextElement) {
+    constructor(
+      previousOperandTextElement,
+      currentOperandTextElement,
+      previousOperandTextElementTwo,
+      previousOperandTextElementThree,
+      previousOperandTextElementFour
+      ) {
         this.previousOperandTextElement = previousOperandTextElement;
         this.currentOperandTextElement = currentOperandTextElement;
+        this.previousOperandTextElementTwo = previousOperandTextElementTwo;
+        this.previousOperandTextElementThree = previousOperandTextElementThree;
+        this.previousOperandTextElementFour = previousOperandTextElementFour;
         this.clear();
         document.addEventListener("keydown", this.handleKeyboardInput.bind(this));
     }
     clear() {
         this.currentOperand = '';
         this.previousOperand = '';
+        this.previousOperandTwo = '';
+        this.previousOperandThree = '';
+        this.previousOperandFour = '';
         this.operation = undefined;
     }
 
@@ -34,17 +49,24 @@ class Calculator {
     }
 
     appendNumber(number) {
-        const hasDot = this.currentOperand.includes('.');
-        const hasPercentage = this.currentOperand.includes('%');
-        const hasPreviousOperand = this.previousOperand !== '';
-    
-        if (number === '.' && (hasDot || this.currentOperand === '')) return;
-        if (number === '%' && (!hasPreviousOperand || hasDot || hasPercentage || this.currentOperand === '')) return;
-        if (number === '0' && this.currentOperand === '') return;
-        if (hasPercentage) return;
-        if (this.currentOperand.length >= 15) return;
-    
-        this.currentOperand = this.currentOperand.toString() + number.toString();
+      const hasDot = this.currentOperand.includes(".");
+      const hasPercentage = this.currentOperand.includes("%");
+      const hasPreviousOperand = this.previousOperand !== "";
+  
+      if (number === "." && (hasDot || this.currentOperand === "")) return;
+      if (
+        number === "%" &&
+        (!hasPreviousOperand ||
+          hasDot ||
+          hasPercentage ||
+          this.currentOperand === "")
+      )
+        return;
+      if (number === "0" && this.currentOperand === "") return;
+      if (hasPercentage) return;
+      if (this.currentOperand.length >= 15) return;
+  
+      this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
     chooseOperation(operation) {
@@ -54,6 +76,9 @@ class Calculator {
         }
         this.operation = operation;
         this.previousOperand = this.currentOperand;
+        this.previousOperandTwo = this.previousOperand;
+        this.previousOperandThree = this.previousOperandTwo;
+        this.previousOperandFour = this.previousOperandThree;
         this.currentOperand = '';
     }
 
@@ -144,6 +169,15 @@ class Calculator {
         if (this,this.currentOperand.includes('%')) {
           this.currentOperandTextElement.innerText += '%';
         }
+        this.previousOperandTextElementTwo.innerText = this.previousOperandTwo;
+        this.previousOperandTextElementThree.innerText = this.previousOperandThree;
+        this.previousOperandTextElementFour.innerText = this.previousOperandFour;
+    }
+
+    previousOperandDisplay() {
+      this.previousOperandTwo = this.previousOperand;
+      this.previousOperandThree = this.previousOperandTwo;
+      this.previousOperandFour = this.previousOperandThree;
     }
 
     handleKeyboardInput(e) {
@@ -229,29 +263,26 @@ operationButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.chooseOperation(button.innerText);
         calculator.updateDisplay();
+        calculator.previousOperandDisplay();
     })
 })
 
 equalsButton.addEventListener('click', button => {
     calculator.compute();
     calculator.updateDisplay();
+    calculator.previousOperandDisplay();
 })
 
 allClearButton.addEventListener('click', button => {
     calculator.clear();
     calculator.updateDisplay();
+    calculator.previousOperandDisplay();
 })
 
 deleteButton.addEventListener('click', button => {
     calculator.delete();
     calculator.updateDisplay();
 })
-
-/* END COMPUTE */
-/* START EFFECTS AND KEYPRESS */
-
-
-
 
 for (let i = 0; i < lightModeBtn.length; i++) {
     lightModeBtn[i].addEventListener("click", function() {
