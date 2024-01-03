@@ -30,18 +30,9 @@ var i, j, k, l;
 /* COMPUTE */
 
 class Calculator {
-  constructor(
-    previousOperandTextElement,
-    currentOperandTextElement,
-    previousOperandTextElementTwo,
-    previousOperandTextElementThree,
-    previousOperandTextElementFour
-  ) {
+  constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement;
     this.currentOperandTextElement = currentOperandTextElement;
-    this.previousOperandTextElementTwo = previousOperandTextElementTwo;
-    this.previousOperandTextElementThree = previousOperandTextElementThree;
-    this.previousOperandTextElementFour = previousOperandTextElementFour;
     this.clear();
     this.equalsPressedLast = false;
     this.currentInput = "";
@@ -52,10 +43,7 @@ class Calculator {
     this.currentOperand = "";
     this.previousOperand = "";
     this.operation = undefined;
-    this.previousOperands = ["", "", "", ""];
-    this.previousOperandTwo = "";
-    this.previousOperandThree = "";
-    this.previousOperandFour = "";
+    this.equalsPressedLast = false;
   }
   // Deletes the last character from the current operand
   delete() {
@@ -97,10 +85,7 @@ class Calculator {
     this.operation = operation;
     this.previousOperand = this.currentOperand;
     this.currentOperand = "";
-    if (!this.equalsPressedLast) {
-      this.updatePreviousOperands(this.previousOperand);
-    }
-    this.equalsPressedLast = false;
+    this.equalsPressedLast = false; // Reset the flag here
     this.currentInput += " " + operation + " ";
   }
   // Computes the result of the operation
@@ -110,7 +95,6 @@ class Calculator {
     const prev = parseFloat(this.previousOperand);
     const current = parseFloat(this.currentOperand);
     if (isNaN(prev) || isNaN(current)) return;
-    if (this.previousOperand === "" && this.currentOperand === "") return;
 
     switch (this.operation) {
       case "+":
@@ -156,15 +140,6 @@ class Calculator {
     this.currentOperand = computation.toString();
     this.operation = undefined;
     this.previousOperand = "";
-    this.previousOperandTextElementTwo.innerText = this.getDisplayNumber(
-      this.previousOperands[0]
-    );
-    this.previousOperandTextElementThree.innerText = this.getDisplayNumber(
-      this.previousOperands[1]
-    );
-    this.previousOperandTextElementFour.innerText = this.getDisplayNumber(
-      this.previousOperands[2]
-    );
   }
   // Returns a display-friendly version of the number
   getDisplayNumber(number) {
@@ -199,16 +174,8 @@ class Calculator {
     if ((this, this.currentOperand.includes("%"))) {
       this.currentOperandTextElement.innerText += "%";
     }
-    this.previousOperandTextElementTwo.innerHTML = this.previousOperandTwo;
-    this.previousOperandTextElementThree.innerHTML = this.previousOperandThree;
-    this.previousOperandTextElementFour.innerHTML = this.previousOperandFour;
   }
 
-  previousOperandDisplay() {
-    this.previousOperandTwo = this.previousOperand;
-    this.previousOperandThree = this.previousOperandTwo;
-    this.previousOperandFour = this.previousOperandThree;
-  }
   // Handles keyboard input
   handleKeyboardInput(e) {
     const key = e.key;
@@ -247,6 +214,7 @@ class Calculator {
       setTimeout(() => {
         equalsButton.classList.remove("active");
       }, 100);
+      this.equalsPressedLast = true;
     } else if (key === "Backspace") {
       // Backspace key
       this.delete();
@@ -294,19 +262,6 @@ class Calculator {
       this.equalsPressedLast = false;
     }
   }
-  updatePreviousOperands() {
-    this.previousOperands.unshift(this.currentInput);
-    if (this.previousOperands.length > 3) {
-      this.previousOperands.pop();
-    }
-
-    this.previousOperandTwo = this.previousOperands[0] || "";
-    this.previousOperandThree = this.previousOperands[1] || "";
-    this.previousOperandFour = this.previousOperands[2] || "";
-
-    // Clear the current input
-    this.currentInput = "";
-  }
 }
 
 const calculator = new Calculator(
@@ -332,8 +287,6 @@ operationButtons.forEach((button) => {
 });
 
 equalsButton.addEventListener("click", (button) => {
-  if (calculator.equalsPressedLast || calculator.currentOperand === "") return;
-  calculator.updatePreviousOperands(calculator.currentOperand);
   calculator.compute();
   calculator.updateDisplay();
   calculator.equalsPressedLast = true;
@@ -342,7 +295,6 @@ equalsButton.addEventListener("click", (button) => {
 allClearButton.addEventListener("click", (button) => {
   calculator.clear();
   calculator.updateDisplay();
-  calculator.equalsPressedLast = false;
 });
 
 deleteButton.addEventListener("click", (button) => {
